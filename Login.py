@@ -10,18 +10,28 @@ path = './HackathonT2/logs.txt'
 user = input('Please enter your username : ')
 passwd = input('Please enter your password : ')
 
-def logopt():
-    print("Which would you like to access >> \n 1. Exsiting Customer \n 2. New Customer \n 3. Exsisting Seller \n 4. New Seller")
-    choice = input()
-    if choice == "1":
-        UserLogYN()
-    if chocie == "2":
-        logopt()
-    if chocie == "3":
-        logopt()
-    if chocie == "4":
-        logopt()
+# def logopt():
+#     print("Which would you like to access >> \n 1. Exsiting Customer \n 2. New Customer \n 3. Exsisting Seller \n 4. New Seller")
+#     choice = input()
+#     if choice == "1":
+#         UserLogYN()
+#     if chocie == "2":
+#         logopt()
+#     if chocie == "3":
+#         logopt()
+#     if chocie == "4":
+#         logopt()
 
+def logopt():
+    print('''
+    THESE ARE THE OPTIONS:
+    1. Exsiting Customer
+    2. New Customer
+    3. Exsisting Seller
+    4. New Seller
+    ''')
+    choice = int(input('Select an option >> '))
+    
 def UserLogYN(message):
     if (message == 'Welcome'):
         with open(path, 'a') as log:
