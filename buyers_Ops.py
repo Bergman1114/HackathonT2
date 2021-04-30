@@ -12,8 +12,6 @@ system('cls')
 def BuyOperation1():
     dbfun.readProductInfo()
 
-
-
 ##################################################################
 
 product_opt = []
@@ -34,4 +32,4 @@ def SellOperation1():
         product_opt.append(product)
         print()
     for product in product_opt:
-        prosql.insertProductInfo(product.getMake(), product.getYear(), product.getModel(), product.getColor())
+        dbfun.insertProductInfo(product.getMake(), product.getYear(), product.getModel(), product.getColor())

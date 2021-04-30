@@ -63,7 +63,7 @@ def LoginPage():
 ########################################
 
 
-def LoginEC():
+def LoginEC(cc=0):
     logging.basicConfig(filename='logs.txt', level=logging.INFO)
     
     user = input('Please enter your username : ')
@@ -84,13 +84,15 @@ def LoginEC():
             with open(path, 'a') as log:
                 log.write(f'\nUser {user} tried to log in on {datetime.now()} - Result: {message}')
                 log.close()
-        else:
-            with open(path, 'a') as log:
-                log.write(f'\nUser {user} tried to log in on {datetime.now()} - Result: {message}')
-                log.close()
+                return 0
 
+        # elif :
+        #     with open(path, 'a') as log:
+        #         log.write(f'\nUser {user} tried to log in on {datetime.now()} - Result: {message}')
+        #         log.close()
+
+    c = True
     with open('userslog.txt') as ud:
-        c = False
         for i in ud.readlines():
             if not len(i.split(",")) == 2:
                 continue
@@ -105,19 +107,20 @@ def LoginEC():
 
                 logging.info(f"Login successfull: User name : {user} | Password : {passwd}")
 
-                c = True
                 printAccessOrNot('Access')
+                c = False
 
-            # else:
-            #     # print('The username and password you used does not match our records')
+        if c:
+            # print(user, username, passwd, password)
 
-            #     # printAccessOrNot('Denied')
-    
-    if not c:
-        logging.info(f"Login unsuccessfull: User name : {user} | Password : {passwd}")
-
-        printAccessOrNot('Denied')
-
+            if (user != username or passwd != password) and cc != 2:
+                print("Login unsuccessfull invalid password and username")
+                logging.info(f"Login unsuccessfull WRONG password and username: User name : {user} | Password : {passwd}")
+                LoginEC(cc + 1)
+            elif cc == 2:
+                system("cls")
+                LoginPage()
+                    # return 0
 
 def NewCusAct():
     logging.basicConfig(filename='logs.txt', level=logging.INFO)
@@ -155,6 +158,8 @@ def NewCusAct():
                 print(f'{u[0]},{u[1]}', file=ud)       
 
         logging.info(f"New User Added : User name : {u[0]} | Password : {u[1]}")
+
+        print(f"Thank You {u[0]}!!\n Your user-info information has been registered!")
 
         print()
 

@@ -1,1 +1,12 @@
-INFO:root:New User Added : User name : monad | Password : 123
+INFO:root:Attempt to login: User name : ki | Password : ki
+INFO:root:Login unsuccessfull WRONG password and username: User name : ki | Password : ki
+INFO:root:Attempt to login: User name : ko | Password : ko
+INFO:root:Login unsuccessfull WRONG password and username: User name : ko | Password : ko
+INFO:root:Attempt to login: User name : lak | Password : ka
+INFO:root:New User Added : User name : bryan | Password : bryan123
+INFO:root:Attempt to login: User name : bryan | Password : brayn123
+INFO:root:Login unsuccessfull WRONG password and username: User name : bryan | Password : brayn123
+INFO:root:Attempt to login: User name : bryan | Password : bryan123
+INFO:root:Login successfull: User name : bryan | Password : bryan123
+
+User bryan tried to log in on 2021-04-30 14:52:52.917978 - Result: Access
