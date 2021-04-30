@@ -15,7 +15,7 @@ def BuyOperation1():
 product_opt = []
 
 def SellOperation1():
-    numberOfEntries = int(input('What are you doing?!? >> '))
+    numberOfEntries = int(input('What are you doing >> '))
     for entry in range(numberOfEntries):
         print(f'--- Product # {entry + 1} ---')
         product = Product()
