@@ -1,4 +1,4 @@
-class Car:
+class Products:
     def __init__(self,make = None, year = None, model = None, color = None):
         self.make = make
         self.year = year

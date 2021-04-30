@@ -1,20 +1,21 @@
 import os 
 import buyers_func as dbfun
 from os import system 
-from products import Product
+from products import Products
 import connection as c 
 import mysql.connector
 
 system('cls')
 
-buyorsell_records = []
+# buyorsell_records = []
 
 def BuyOperation1():
     dbfun.readProductInfo()
 
-products = []
+product_opt = []
+
 def SellOperation1():
-    numberOfEntries = int(input('Enter number of records >> '))
+    numberOfEntries = int(input('What are you doing?!? >> '))
     for entry in range(numberOfEntries):
         print(f'--- Product # {entry + 1} ---')
         product = Product()
@@ -26,7 +27,7 @@ def SellOperation1():
         product.setYear(year)
         color = input('What is the color of car? >> ')
         product.setPhone(color)
-        products.append(product)
+        product_opt.append(product)
         print()
-    for product in products:
+    for product in product_opt:
         prosql.insertProductInfo(product.getMake(), product.getYear(), product.getModel(), product.getColor())

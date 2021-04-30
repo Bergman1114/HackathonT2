@@ -1,7 +1,8 @@
 import os  
 from os import system 
 import mysql.connector
-import connection as c
+import buyers_Ops as dbops
+#import connection as c
 
 system('cls')
 
@@ -12,11 +13,11 @@ buyorsellList = ['Buy', 'Sell']
 
 counter = 1
 
-cursor.execute('SELECT * FROM products')
-dbresult = conn.fetchone()
+# cursor.execute('SELECT * FROM products')
+# dbresult = conn.fetchone()
 
-for row in dbresult:
-    print(row)
+# for row in dbresult:
+#     print(row)
 
 print('Would you like to Buy or Sell?: ')
 for buyorsell in buyorsellList :
@@ -29,4 +30,4 @@ if (choice == 1):
 elif (choice == 2):
     dbops.SellOperation1()   ########## make def
 else:
-    print('We are stealing your')
+    print('We are stealing your info, muhahahahaaha')
