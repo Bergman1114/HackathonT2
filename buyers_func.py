@@ -1,6 +1,7 @@
 import connection as c 
 import mysql.connector
 
+
 def readProductInfo():
     conn = c.returnConnection()
     try:
