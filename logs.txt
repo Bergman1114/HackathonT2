@@ -1,3 +1,1 @@
-User carlos tried to log in on 2021-04-29 11:29:08.302140 - Result: Success
-User ffrank tried to log in on 2021-04-29 11:29:23.640326 - Result: Failed
-User ghh tried to log in on 2021-04-29 11:30:56.729059 - Result: Failed
+INFO:root:New User Added : User name : monad | Password : 123
