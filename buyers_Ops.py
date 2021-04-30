@@ -12,6 +12,10 @@ system('cls')
 def BuyOperation1():
     dbfun.readProductInfo()
 
+
+
+##################################################################
+
 product_opt = []
 
 def SellOperation1():
