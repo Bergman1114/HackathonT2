@@ -6,7 +6,7 @@ import buyers_Ops as dbops
 
 system('cls')
 
-# conn = c.returnConnection()
+# conn = c.returnConnection() test
 # cursor = conn.cursor()
 
 buyorsellList = ['Buy', 'Sell']
