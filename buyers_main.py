@@ -143,7 +143,7 @@ else:
 
 print()
 print(Fore.YELLOW,f'********************************************')
-print('             APPRECIATE                    ')
+print('             APPRECIATION                    ')
 print('******************************************')
 print(Style.RESET_ALL)
 print()
