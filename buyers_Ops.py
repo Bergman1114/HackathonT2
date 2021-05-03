@@ -2,34 +2,28 @@ import os
 import buyers_func as dbfun
 from os import system 
 from products import Products
-import connection as c 
-import mysql.connector
-
-system('cls')
-
-# buyorsell_records = []
-
-def BuyOperation1():
-    dbfun.readProductInfo()
-
-##################################################################
+from colorama import Fore,Style
 
 product_opt = []
+print()
+print(Fore.MAGENTA,f'********************************************')
+print('               BUYING                       ')
+print('******************************************')
+print()
+print(Style.RESET_ALL)
 
-def SellOperation1():
-    numberOfEntries = int(input('What are you doing >> '))
-    for entry in range(numberOfEntries):
-        print(f'--- Product # {entry + 1} ---')
-        product = Product()
-        product = input('What is the make of car? >> ')
-        make.setMake(make)
-        model= int(input('What is the model of car? >> '))
-        product.setModel(model)
-        year = input('What is the year of car? >> ')
-        product.setYear(year)
-        color = input('What is the color of car? >> ')
-        product.setPhone(color)
-        product_opt.append(product)
-        print()
-    for product in product_opt:
-        dbfun.insertProductInfo(product.getMake(), product.getYear(), product.getModel(), product.getColor())
+car_make = input('Enter the car make you want to select >> ')
+
+print('Below are the cars available')
+all_cars = dbfun.carDetails(car_make)
+for i in range(len(all_cars)):
+    car = all_cars[i]
+    print(f' {car.make} {car.model} {car.year} {car.color} ${car.price} To Purchase Enter - {car.id} >> ')
+print()
+selectedCar = int(input('Please enter Your selection >> '))
+
+carSold = dbfun.carSold(selectedCar)
+for i in range(len(carSold)):
+    car = carSold[i]
+    print(f' {car.make} {car.model} {car.year} {car.color} ${car.price} To Purchase Enter - {car.id} >> ')
+

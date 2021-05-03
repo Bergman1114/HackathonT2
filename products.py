@@ -1,9 +1,12 @@
 class Products:
-    def __init__(self,make = None, year = None, model = None, color = None):
+    def __init__(self, id = None, make = None, year = None, model = None, color = None, price = None, status='A'):
         self.make = make
         self.year = year
         self.model = model
         self.color = color
+        self.price = price
+        self.status = status
+        self.id = id
     
     def setMake(self, make):
         self.make = make
@@ -30,7 +33,19 @@ class Products:
         return self.color
 
     def setPrice(self, price):
-        self.color = color
+        self.price = price
 
     def getPrice(self):
         return self.price
+
+    def setStatus(self, status):
+        self.status = status
+
+    def getStatus(self):
+        return self.status
+
+    def setId(self, id):
+        self.id = id
+
+    def getId(self):
+        return self.id

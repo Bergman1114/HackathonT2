@@ -1,12 +1,24 @@
-INFO:root:Attempt to login: User name : ki | Password : ki
-INFO:root:Login unsuccessfull WRONG password and username: User name : ki | Password : ki
-INFO:root:Attempt to login: User name : ko | Password : ko
-INFO:root:Login unsuccessfull WRONG password and username: User name : ko | Password : ko
-INFO:root:Attempt to login: User name : lak | Password : ka
-INFO:root:New User Added : User name : bryan | Password : bryan123
-INFO:root:Attempt to login: User name : bryan | Password : brayn123
-INFO:root:Login unsuccessfull WRONG password and username: User name : bryan | Password : brayn123
-INFO:root:Attempt to login: User name : bryan | Password : bryan123
-INFO:root:Login successfull: User name : bryan | Password : bryan123
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Attempt to login: User name : kite | Password : pass
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Login successfull: User name : kite | Password : pass1
 
-User bryan tried to log in on 2021-04-30 14:52:52.917978 - Result: Access
+User kite tried to log in on 2021-05-02 22:45:27.877615 - Result: AccessINFO:root:Attempt to login: User name : kite | Password : pass
+INFO:root:Login unsuccessfull WRONG password and username: User name : kite | Password : pass
+INFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Login successfull: User name : kite | Password : pass1
+
+User kite tried to log in on 2021-05-02 23:11:27.343736 - Result: AccessINFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Login successfull: User name : kite | Password : pass1
+
+User kite tried to log in on 2021-05-02 23:12:39.387410 - Result: AccessINFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Login successfull: User name : kite | Password : pass1
+
+User kite tried to log in on 2021-05-02 23:14:01.858078 - Result: AccessINFO:root:Attempt to login: User name : kite | Password : pass1
+INFO:root:Login successfull: User name : kite | Password : pass1
+
+User kite tried to log in on 2021-05-02 23:14:56.649790 - Result: Access

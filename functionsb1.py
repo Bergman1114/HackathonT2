@@ -1,11 +1,9 @@
-# import connection as c 
-# import mysql.connector
 import os, datetime
 from os import system
 from datetime import *
 import logging
 
-system('cls')
+
 
 def LoginPage():
     print('''
@@ -21,46 +19,14 @@ def LoginPage():
         NewCusAct()  #newuser 
     elif( choice == 3 ):
         print("Now Stealing your DATA...")
-        sleep(2)
+        # sleep(2)
         exit()
     else:
         print("Choose a valid option")
-        LoginPage('')
+        LoginPage()
 
+    
 
-#####################################
-
-# def LoginEC():
-#     conn = c.returnConnection()
-#     while True:
-#         EUN = input("Enter The Username: ")
-#         PWD = input("Enter The Password: ")
-#         cursor = conn.cursor()
-#         select_user = ("SELECT * FROM useract WHERE Username = ? AND Password = ?")
-#         cursor.execute("SELECT user_password FROM useract WHERE username=%s", '{username}')
-#         row = cursor.fetchone()
-#         cursor.close()
-#         conn.close()
-#         break
-
-# LoginPage()
-
-######################################
-
-# def LoginEC():
-#     EUN = input("Enter The Username: ")
-#     PWD = input("Enter The Password: ")
-#     if( PWD == user.password):
-#         print("Access, you are logged in and fully authenticated : " + user.name)
-#     else:
-#         print("The username and password you used does not match our records")
-#         login(user)
-#     LoginPage('')
-
-# LoginPage('')
-
-
-########################################
 
 
 def LoginEC(cc=0):
@@ -92,7 +58,7 @@ def LoginEC(cc=0):
         #         log.close()
 
     c = True
-    with open('userslog.txt') as ud:
+    with open('./userslog.txt') as ud:
         for i in ud.readlines():
             if not len(i.split(",")) == 2:
                 continue
@@ -163,4 +129,3 @@ def NewCusAct():
 
         print()
 
-LoginPage()
